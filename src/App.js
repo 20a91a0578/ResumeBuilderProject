@@ -27,7 +27,7 @@ function App() {
      
       <Route path='/contact' element={<Contact/>}/>
     </Routes>
-    {/* <Carousel/> */}
+  
     <Foot/>
     </BrowserRouter>
 
