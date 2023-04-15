@@ -4,12 +4,17 @@ import Img1 from './image1.png'
 import Img2 from './image2.png'
 import Img3 from './image3.jpg'
 import Img4 from './image4.webp'
-
+import CreateResume from './createresume'
 function LandingPage() {
   const imgCon = [Img1,Img2,Img3,Img4]
     const prev = '<'
     const next = '>'
     let [ind,upInd] = useState(0)
+    const [create,setcreate]=useState(false);
+    function createcv(){
+      setcreate(true);
+    }
+    
     useEffect(() => {
         const imageChange = setInterval(() => {
             ind++;
@@ -19,6 +24,11 @@ function LandingPage() {
         }, 5000);
         return () => clearInterval(imageChange);
       }, []);
+      if(create){
+      return (
+        <CreateResume/>
+      )
+      }
   return (
     <>
     <br/><br/>
@@ -38,7 +48,7 @@ function LandingPage() {
         <img src={imgCon[ind]} alt=""/>
         </div>
         <br/>
-        <button className='createCV'>Create your CV</button>
+        <button className='createCV' onClick={createcv}>Create your CV</button>
         </>
   )
 }
