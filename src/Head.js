@@ -7,26 +7,26 @@ function Head(){
     const navigate = useNavigate()
     return (
       <>
-      <h1 style={{textAlign:"center"}}>Aditya Resume Builder</h1>
-        <nav id='nav'>
+   <div className="header">
+   <h1 style={{textAlign:"center",marginLeft:'2%'}}>Aditya Resume Builder</h1>
+        <nav id='nav'className="header">
             
-            <ul>
-            <li onClick={(e)=>{
+            <ul className="header" style={{marginLeft:"-30%"}}>
+                <li><Link to='/home' >Home</Link></li>
+                <li><Link to='/Login' >Login</Link></li>
+                <li><Link to='/Singup' >Signup</Link></li>
+                <li><Link to='/contact' >Contact</Link></li>
+                <li onClick={(e)=>{
                     e.preventDefault();
         localStorage.removeItem('data')
                     navigate('/login')
                 }}><FiLogOut/></li>
-                <li><Link to='/contact' >Contact</Link></li>
-                <li><Link to='/Singup' >Signup</Link></li>
-                <li><Link to='/Login' >Login</Link></li>
-                <li><Link to='/home' >Home</Link></li>
-                
-               
                 
                
                 
             </ul>
         </nav>
+   </div>
       </>
 
     )

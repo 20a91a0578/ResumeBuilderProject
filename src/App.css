@@ -4,4 +4,95 @@
     align-items: center;
     justify-content: center;
   }
-  
+  .carouselClass{
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carouselClass .arrow{
+    position: absolute;
+    top:35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 50px;
+    font-size: 60px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #FFF;
+    transition: all .3s ease-in-out;
+  }
+  .carouselClass .arrow p{
+    background: rgba(14, 13, 13, 0.297);
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    width: 60px;
+    border-radius: 10px;
+    justify-content: space-around;
+    transition: all .4s ease-in-out;
+  }
+  .carouselClass .arrow p:hover{
+    background: rgba(14, 13, 13, 0.585);
+  }
+  .carouselClass .prev{
+    left: 10px;
+  }
+  .carouselClass .next{
+    right: 10px;
+  }
+  .carouselClass img{
+    height: 80vh;
+    cursor: pointer;
+  }
+  .createCV{
+    background: red;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    transform: translateX(46vw);
+    margin: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  .createCV:hover{
+    background:rgb(8, 165, 39) ;
+  }
+  /* .header{
+    background-color: rgb(6, 3, 74);
+    color: rgb(218, 96, 9);
+  } */
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    background: rgb(2, 10, 96);
+    color: white;
+    position: sticky;
+    top: 0;
+    margin-left: 0%;
+    z-index: 10;
+  }
+  li{
+    padding-right:4% ;
+    padding-left: 2%;
+   
+  }
+  a{
+    color:white;
+  }
+  .foot{
+    background-color: rgb(2, 10, 96);;
+    color: white;
+    padding-top: 1%;
+    padding-bottom:1% ;
+    text-align: center;
+  }

@@ -7,14 +7,6 @@ li{
 a:hover{
     text-decoration: none;
 }
-.carousel {
-    display: flex;
-    overflow: hidden;
-    flex-direction: row ;
-  }
-  
-  .carousel-slide {
-    flex: 1 0 100%;
-    transition: transform 0.5s ease-in-out;
-  }
-  
+a::after{
+  color:white;
+}
