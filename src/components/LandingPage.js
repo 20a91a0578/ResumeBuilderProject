@@ -4,16 +4,14 @@ import Img1 from './image1.png'
 import Img2 from './image2.png'
 import Img3 from './image3.jpg'
 import Img4 from './image4.webp'
-import CreateResume from './createresume'
+import { Link } from 'react-router-dom'
 function LandingPage() {
   const imgCon = [Img1,Img2,Img3,Img4]
     const prev = '<'
     const next = '>'
     let [ind,upInd] = useState(0)
-    const [create,setcreate]=useState(false);
-    function createcv(){
-      setcreate(true);
-    }
+
+
     
     useEffect(() => {
         const imageChange = setInterval(() => {
@@ -24,11 +22,7 @@ function LandingPage() {
         }, 5000);
         return () => clearInterval(imageChange);
       }, []);
-      if(create){
-      return (
-        <CreateResume/>
-      )
-      }
+   
   return (
     <>
     <br/><br/>
@@ -48,7 +42,7 @@ function LandingPage() {
         <img src={imgCon[ind]} alt=""/>
         </div>
         <br/>
-        <button className='createCV' onClick={createcv}>Create your CV</button>
+        <button className='createCV' ><Link to ='/create-resume'>CreateResume</Link></button>
         </>
   )
 }

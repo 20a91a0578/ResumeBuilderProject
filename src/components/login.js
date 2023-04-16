@@ -1,44 +1,3 @@
-// import React, { useState } from 'react';
-
-// const Login= () => {
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-
-//   const handleEmailChange = (event) => {
-//     setEmail(event.target.value);
-//   }
-
-//   const handlePasswordChange = (event) => {
-//     setPassword(event.target.value);
-//   }
-
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-//     console.log(`Email: ${email}, Password: ${password}`);
-//     // submit form data here
-//   }
-
-//   return (
-//     <>
-//     <br/><br/>
-//     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-//       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-//         <h2 style={{ marginBottom: '20px' }}>Log In</h2>
-
-//         <label htmlFor="email" style={{ marginBottom: '5px' }}>Email</label>
-//         <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} style={{ marginBottom: '15px' }} />
-
-//         <label htmlFor="password" style={{ marginBottom: '5px' }}>Password</label>
-//         <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} style={{ marginBottom: '15px' }} />
-
-//         <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '5px' }}>Log In</button>
-//       </form>
-//     </div>
-//     </>
-//   );
-// }
-
-// export default Login;
 import React, { useState } from 'react';
 
 function Login() {
@@ -54,7 +13,8 @@ function Login() {
    <>
    <br/><br/>
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <h2 style={{ marginBottom: '1rem' }}>Login</h2>
+      <h2 style={{ marginBottom: '1rem' }}>Welcome, Please give correct Details for Login</h2><br/><br/>
+      <div style={{boxShadow:'5px 5px 4px',padding:'1%',border:'1px solid black',height:'50vh'}}>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ marginBottom: '1rem' }}>
           <label htmlFor="email" style={{ marginRight: '1rem' }}>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
@@ -62,7 +22,7 @@ function Login() {
             type="email"
             id="email"
             value={email}
-            onChange={(event) => setEmail(event.target.value)}
+            onChange={(event) => setEmail(event.target.value)} placeholder='enter username'
             style={{ padding: '0.5rem', borderRadius: '0.25rem', border: '1px solid #ccc' }}
           />
         </div>
@@ -72,14 +32,24 @@ function Login() {
           <input
             type="password"
             id="password"
+            placeholder='enter your password'
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             style={{ padding: '0.5rem', borderRadius: '0.25rem', border: '1px solid #ccc' }}
           />
           <br/><br/>
         </div>
+        <h5 style={{color:'red'}}>
+          **  please ensure that all the details entered <br/>
+          by you are the correct. Otherwise you  Login<br/>
+            can not performed.So check once before  <br/>
+            submit.
+        </h5>
+        <br/>
+        <p><input type='checkbox' name='checkbox'/> &nbsp;Remember for Further Logins</p>
         <button type="submit" style={{ padding: '0.5rem 1rem', borderRadius: '0.25rem', border: 'none', backgroundColor: '#007bff', color: '#fff', cursor: 'pointer' }}>Login</button>
       </form>
+      </div>
     </div>
    </>
   );

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Template from "./template";
 import React, { useState } from "react";
 
@@ -281,7 +282,7 @@ if(issubmit){
     />
   </div> */}
   <button type="submit" className="btn btn-success" style={{ padding: "10px 20px" }}>
-    Submit
+  Submit
   </button>
 </form>
 </div>

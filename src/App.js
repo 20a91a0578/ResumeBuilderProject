@@ -7,7 +7,7 @@ import Signup from './components/Signup';
 import Contact from './components/contact';
 import Foot from './foot';
 import CreateResume from './components/createresume';
-
+import Template from './components/template';
 function App() {
   // console.log(props.employeeID);
   return (
@@ -22,7 +22,7 @@ function App() {
       <Route path='/login' element={<Login />}/>
       
       <Route path='/Singup' element={<Signup />}/>
-     
+     <Route path='/final-resume' element={<Template/>}/>
      <Route path='/create-resume' element={<CreateResume/>}/>
      
       <Route path='/contact' element={<Contact/>}/>
