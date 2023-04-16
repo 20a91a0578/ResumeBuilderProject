@@ -26,7 +26,10 @@ const CreateResume = () => {
     byear:"",
     icol:"",
     icgpa:"",
-    iyear:""
+    iyear:"",
+    scgpa:'',
+    scol:"",
+    syear:"",
   });
 const [issubmit,setsubmit]=useState(false);
   const handleChange = (event) => {
@@ -45,7 +48,7 @@ const [issubmit,setsubmit]=useState(false);
 if(issubmit){
   return(
     <Template firstName={formData.firstName} lastName={formData.lastName} email={formData.email} phone={formData.phone}
-    address={formData.address} c1={formData.certification1} c2={formData.certification2} s1={formData.skill1} s2={formData.skill2}
+    address={formData.address} c1={formData.certification1} c2={formData.certification2} s1={formData.skill1} s2={formData.skill2} scol={formData.scol} scgpa={formData.scgpa} syear={formData.syear}
     s3={formData.skill3} role={formData.role} pd1={formData.projectd1} pd2={formData.projectd2} p1={formData.projn1} p2={formData.projn2}about={formData.about}
     bcol={formData.bcol} bcgpa={formData.bcgpa}byear={formData.byear} icol={formData.icol} icgpa={formData.icgpa} c3={formData.certification3}iyear={formData.iyear} />
   )
@@ -226,6 +229,13 @@ if(issubmit){
     <input type='text' value={formData.icgpa} name='icgpa'onChange={handleChange} style={inputStyle}/>
     <label style={labelStyle}>Academic Year</label>
     <input type='text' value={formData.iyear} name='iyear' onChange={handleChange} style={inputStyle}/>
+    <label style={labelStyle}>School Name</label>
+    <input type='text' value={formData.scol} name='scol' onChange={handleChange} style={inputStyle}/>
+    <label style={labelStyle}>SSC CGPA:</label>
+    <input type='text' value={formData.scgpa} name='scgpa'onChange={handleChange} style={inputStyle}/>
+    <label style={labelStyle}>Academic Year</label>
+    <input type='text' value={formData.syear} name='syear' onChange={handleChange} style={inputStyle}/>
+
   </div>
 
   <div style={{ marginBottom: "15px" }}>
