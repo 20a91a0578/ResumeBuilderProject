@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
   }
-  .carouselClass{
+  .classcarousel{
     position: relative;
     height: 80vh;
     width: 100%;
@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
   }
-  .carouselClass .arrow{
+  .classcarousel .arrow{
     position: absolute;
     top:35vh;
     display: flex;
@@ -26,7 +26,7 @@
     color: #FFF;
     transition: all .3s ease-in-out;
   }
-  .carouselClass .arrow p{
+  .classcarousel .arrow p{
     background: rgba(14, 13, 13, 0.297);
     position: relative;
     height: 60px;
@@ -37,20 +37,20 @@
     justify-content: space-around;
     transition: all .4s ease-in-out;
   }
-  .carouselClass .arrow p:hover{
+  .classcarousel .arrow p:hover{
     background: rgba(14, 13, 13, 0.585);
   }
-  .carouselClass .prev{
+  .classcarousel .prev{
     left: 10px;
   }
-  .carouselClass .next{
+  .classcarousel .next{
     right: 10px;
   }
-  .carouselClass img{
+  .classcarousel img{
     height: 80vh;
     cursor: pointer;
   }
-  .createCV{
+  .createresume{
     background: red;
     padding: 10px 15px;
     border: none;
